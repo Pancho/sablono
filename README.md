@@ -1,2 +1,2 @@
-# sablono
-TODO
+# Sablono
+## Avoiding Bootstrap-like paper weights

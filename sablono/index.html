@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sablono - Administration</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="media/css/reset.css" />
+		<link type="text/css" rel="stylesheet" href="media/css/sablono.css" />
+		<link type="text/css" rel="stylesheet" href="media/css/colors.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width" />
+	</head>
+	<body>
+		<header class="head bg-light-blue-70 white">
+			<h1 class="bg-light-blue-80"><a href="" class="white" title="It's ´template´ in Esperanto"><strong>S</strong>ablono</a></h1>
+			<ol>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-flag"><sup class="bg-green-60">3</sup></a></li>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-bell"><sup class="bg-amber-70">15</sup></a></li>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-envelope"><sup class="bg-red-60">59</sup></a></li>
+				<li class="user">
+					<img src="media/img/user.jpg" alt="Ron Swanson" width="25" height="25"/>
+					<p class="white">Ron Swanson</p>
+				</li>
+				<li class="logout bg-shade-10-hover"><a href="" class="fas fa-sign-out-alt"></a></li>
+				<li class="login bg-shade-10-hover"><a href="" class="far fa-user"></a></li>
+			</ol>
+		</header>
+		<nav class="navigation bg-blue-grey-90">
+			<div class="profile">
+				<div class="user inline-block-children">
+					<div class="image">
+						<img src="media/img/user.jpg" alt="Danijel Pančić" width="45" height="45"/>
+					</div>
+					<div>
+						<p class="white"><strong>Ron Swanson</strong></p>
+						<p class="white" title="Chief Title Officer">CTO</p>
+					</div>
+				</div>
+			</div>
+			<ol>
+				<li class="header bg-shade-30 blue-grey-70">System</li>
+				<li>
+					<a href="" class="blue-grey-20 white-hover bg-shade-20-hover"><span class="fas fa-cogs"></span> Admin</a>
+				</li>
+				<li class="header bg-shade-30 blue-grey-70">Source</li>
+				<li class="selected">
+					<a href="" class="white white-hover bg-shade-20-hover border-light-blue-70"><span class="fas fa-code"></span> HTML Templates</a>
+				</li>
+				<li>
+					<a href="" class="blue-grey-20 white-hover bg-shade-20-hover"><span class="fab fa-css3"></span> CSS Classes</a>
+				</li>
+			</ol>
+		</nav>
+		<main class="bg-blue-grey-5">
+			<ol id="notifications">
+				<li class="white bg-amber-70">
+					<p>This is a sample notification that's supposed to be really hard to miss. And it's stackable with a copy of this element's parent element.</p>
+					<a class="fas fa-times close"></a>
+				</li>
+			</ol>
+			<div>
+				<h2>Dashboard <span class="grey-60">Dashboard subtitle</span></h2>
+			</div>
+			<div data-grid="1/4">
+				<div class="info-box bg-light-blue-30 white">
+					<div class="info-box-content inline-block-children">
+						<div class="text">
+							<h4>150</h4>
+							<p>Open Offers</p>
+						</div>
+						<div>
+							<div class="icon far fa-user shade-20"></div>
+						</div>
+					</div>
+					<a class="bg-shade-10 light-80 bg-shade-20-hover white-hover" href="">More info <span class="fas fa-arrow-circle-right"></span></a>
+				</div>
+				<div class="info-box bg-green-60 white">
+					<div class="info-box-content inline-block-children">
+						<div class="text">
+							<h4>150</h4>
+							<p>Open Offers</p>
+						</div>
+						<div>
+							<div class="icon fa fa-briefcase shade-20"></div>
+						</div>
+					</div>
+					<a class="bg-shade-10 light-80 bg-shade-20-hover white-hover" href="">More info <span class="fas fa-arrow-circle-right"></span></a>
+				</div>
+				<div class="info-box bg-amber-70 white">
+					<div class="info-box-content inline-block-children">
+						<div class="text">
+							<h4>150</h4>
+							<p>Open Offers</p>
+						</div>
+						<div>
+							<div class="icon fa fa-chart-bar shade-20"></div>
+						</div>
+					</div>
+					<a class="bg-shade-10 light-80 bg-shade-20-hover white-hover" href="">More info <span class="fas fa-arrow-circle-right"></span></a>
+				</div>
+				<div class="info-box bg-red-60 white">
+					<div class="info-box-content inline-block-children">
+						<div class="text">
+							<h4>150</h4>
+							<p>Open Offers</p>
+						</div>
+						<div>
+							<div class="icon far fa-comment shade-20"></div>
+						</div>
+					</div>
+					<a class="bg-shade-10 light-80 bg-shade-20-hover white-hover" href="">More info <span class="fas fa-arrow-circle-right"></span></a>
+				</div>
+			</div>
+			<div data-grid="1/4">
+				<div class="info-box-basic white inline-block-children bg-white">
+					<div class="bg-light-blue-30">
+						<div class="icon far fa-user white"></div>
+					</div>
+					<div class="text">
+						<h4 class="grey-80">Open Offers</h4>
+						<p class="grey-80">150</p>
+					</div>
+				</div>
+				<div class="info-box-basic inline-block-children bg-white white">
+					<div class="bg-green-60">
+						<div class="icon fas fa-briefcase white"></div>
+					</div>
+					<div class="text">
+						<h4 class="grey-80">Open Offers</h4>
+						<p class="grey-80">150</p>
+					</div>
+				</div>
+				<div class="info-box-basic inline-block-children bg-white white">
+					<div class="bg-amber-70">
+						<div class="icon fas fa-chart-bar white"></div>
+					</div>
+					<div class="text">
+						<h4 class="grey-80">Open Offers</h4>
+						<p class="grey-80">150</p>
+					</div>
+				</div>
+				<div class="info-box-basic inline-block-children bg-white white">
+					<div class="bg-red-60">
+						<div class="icon far fa-comment white"></div>
+					</div>
+					<div class="text">
+						<h4 class="grey-80">Open Offers</h4>
+						<p class="grey-80">150</p>
+					</div>
+				</div>
+			</div>
+			<div data-grid="1/2">
+				<div data-grid="1/1">
+					<section class="box bg-white border-blue-50 top-border">
+						<header class="border-grey-10">
+							<h3>Definition list <span>subtitle</span></h3>
+							<span class="control inline-block-children"><a class="collapse fas fa-minus shade-50 shade-60-hover"></a><a class="close fas fa-times shade-50 shade-60-hover"></a></span>
+						</header>
+						<div class="content">
+							<dl class="inline-block-children">
+								<dt>Slug</dt>
+								<dd>hasan-puric</dd>
+								<dt>Game Modes</dt>
+								<dd>20</dd>
+							</dl>
+						</div>
+						<div class="control">
+							<ol class="pagination right inline-block-children border-grey-10">
+								<li class="prev bg-grey-5 bg-shade-5-hover"><a href=""><span class="fas fa-angle-double-left"></span></a></li>
+								<li class="bg-grey-5 bg-shade-5-hover"><a href="">1</a></li>
+								<li class="bg-grey-5 bg-shade-5-hover"><a href="">2</a></li>
+								<li class="bg-grey-5 bg-shade-5-hover"><a>&hellip;</a></li>
+								<li class="bg-grey-5 bg-shade-5-hover"><a href="">99</a></li>
+								<li class="bg-grey-5 bg-shade-5-hover"><a href="">100</a></li>
+								<li class="next bg-grey-5 bg-shade-5-hover"><a href=""><span class="fas fa-angle-double-right"></span></a></li>
+							</ol>
+						</div>
+					</section>
+					<div class="info-box-bar vertical white">
+						<div class="info-box-content bg-red-60 inline-block-children">
+							<div class="bg-shade-20">
+								<div class="icon fas fa-comment white"></div>
+							</div>
+							<div class="text">
+								<h4 class="white">Open</h4>
+								<p class="white">150</p>
+								<div class="bar bg-shade-20">
+									<div class="progress bg-white" style="width:66.66666666%;"></div>
+								</div>
+								<span class="white">70%</span>
+							</div>
+						</div>
+					</div>
+					<div class="info-box-bar white">
+						<div class="info-box-content bg-amber-70 inline-block-children">
+							<div class="bg-shade-20">
+								<div class="icon fas fa-chart-bar white"></div>
+							</div>
+							<div class="text">
+								<h4 class="white">Open Offers</h4>
+								<p class="white">150</p>
+								<div class="bar bg-shade-20">
+									<div class="progress bg-white" style="width:25%;"></div>
+								</div>
+								<span class="white">70% Increase in 30 Days</span>
+							</div>
+						</div>
+					</div>
+					<div class="info-box-bar vertical white">
+						<div class="info-box-content bg-red-60 inline-block-children">
+							<div class="bg-shade-20">
+								<div class="icon fas fa-comment white"></div>
+							</div>
+							<div class="text">
+								<h4 class="white">Open</h4>
+								<p class="white">150</p>
+								<div class="bar bg-shade-20">
+									<div class="progress bg-white" style="width:66.66666666%;"></div>
+								</div>
+								<span class="white">70%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="box bg-white border-blue-50 top-border">
+					<header class="border-grey-10">
+						<h3>Chart Example <span>nukes count</span></h3>
+						<span class="control inline-block-children"><a class="collapse fas fa-minus shade-50 shade-60-hover"></a><a class="close fas fa-times shade-50 shade-60-hover"></a></span>
+					</header>
+					<div class="content">
+						<div id="container" class="height-400"></div>
+					</div>
+				</section>
+			</div>
+			<div data-grid="1/2">
+				<section class="box bg-white border-blue-50 top-border">
+					<header class="border-grey-10">
+						<h3>Loading Example <span>with spinner</span></h3>
+						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+					</header>
+					<div class="loading"></div>
+				</section>
+				<section class="box box-tabbed bg-white border-blue-50">
+					<header class="border-grey-10">
+						<h3>Definition list <span>subtitle</span></h3>
+						<ol class="tabs inline-block-children">
+							<li class="selected border-blue-50 bg-white" data-target="def-list"><a>Def List</a></li>
+							<li class="" data-target="table"><a>Table</a></li>
+						</ol>
+					</header>
+					<ol class="tabs-content">
+						<li id="def-list">
+							<div class="content">
+								<dl class="inline-block-children">
+									<dt>Slug</dt>
+									<dd>hasan-puric</dd>
+									<dt>Game Modes</dt>
+									<dd>20</dd>
+								</dl>
+							</div>
+						</li>
+						<li id="table" class="hidden">
+							<table class="full-width">
+								<thead>
+									<tr>
+										<th>Key</th>
+										<th>Value</th>
+										<th>Progress</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Slug</td>
+										<td>hasan-puric</td>
+										<td>
+											<div class="progress-bar progress-bar-xthin bg-shade-10">
+												<div class="bg-red-50" style="width:66.66666666%;"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Game Modes</td>
+										<td>20</td>
+										<td>
+											<div class="progress-bar progress-bar-thin bg-shade-10">
+												<div class="bg-teal-50" style="width:54%;"></div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>Progress Bar test</td>
+										<td>Full Height</td>
+										<td>
+											<div class="progress-bar bg-shade-10">
+												<div class="bg-light-green-50" style="width:100%;"></div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+					</ol>
+				</section>
+			</div>
+			<div data-grid="1/2">
+				<section class="box top-border bg-white border-blue-50">
+					<header class="border-grey-10">
+						<h3>Just some text <span>and how it looks</span></h3>
+						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+					</header>
+					<div class="content">
+						<p><strong>How to use:</strong></p>
+						<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now.</p>
+					</div>
+				</section>
+				<section class="box top-border bg-white border-blue-50">
+					<header class="border-grey-10">
+						<h3>Just some text <span>with a progress bar</span></h3>
+						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+					</header>
+					<div class="content">
+						<p><strong>How to use:</strong></p>
+						<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+					</div>
+					<div class="content">
+						<div class="progress-bar">
+							<div class="bg-amber-70 white" style="width:100%;"></div>
+						</div>
+					</div>
+					<div class="content">
+						<div class="progress-bar progress-bar-thin">
+							<div class="bg-purple-50 white" style="width:45%;"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div data-grid="1/3">
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-light-blue-30 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-user white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<div class="bar bg-shade-20">
+								<div class="progress bg-white" style="width:80%;"></div>
+							</div>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-green-60 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-briefcase white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<div class="bar bg-shade-20">
+								<div class="progress bg-white" style="width:33.33333333%;"></div>
+							</div>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-green-60 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-briefcase white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<div class="bar bg-shade-20">
+								<div class="progress bg-white" style="width:33.33333333%;"></div>
+							</div>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-grid="1/2">
+				<section class="box top-border bg-white border-blue-50">
+					<header class="border-grey-10">
+						<h3>Form <span>and fields</span></h3>
+					</header>
+					<form action="" method="get" id="form-fields">
+						<fieldset>
+							<ol>
+								<li class="border-blue-60">
+									<label for="form-fields-text">Text</label>
+									<input class="field border-grey-40 grey-70" type="text" name="text" id="form-fields-text" placeholder="Text Field" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-fields-datetime">Datetime</label>
+									<input class="field border-grey-40 grey-70" type="datetime-local" name="datetime" id="form-fields-datetime" placeholder="Datetime Field" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-fields-password">Password</label>
+									<input class="field border-grey-40 grey-70" type="password" name="password" id="form-fields-password" placeholder="password" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-fields-select">Select</label>
+									<select class="field border-grey-40 grey-70" name="select" id="form-fields-select" required="required">
+										<option value="1">First</option>
+										<option value="2">Second</option>
+										<option value="3">Third</option>
+									</select>
+								</li>
+								<li class="border-blue-60">
+									<label for="form-fields-textarea">Textarea</label>
+									<textarea class="field border-grey-40 grey-70" name="textarea" id="form-fields-textarea" required="required"></textarea>
+								</li>
+								<li class="checkbox border-blue-60">
+									<ol>
+										<li>
+											<label for="checkbox1">
+												<input type="checkbox" name="checkbox" id="checkbox1" value="checkobx1" />Checkbox 1
+											</label>
+										</li>
+										<li>
+											<label for="checkbox2">
+												<input type="checkbox" name="checkbox" id="checkbox2" value="checkobx2" />Checkbox 2 with a severly long text so it certainly doesn't fit into one line in the form (by adding even more tekst to this line)
+											</label>
+										</li>
+										<li>
+											<label for="checkbox3">
+												<input type="checkbox" name="checkbox" id="checkbox3" value="checkobx3" />Checkbox 3
+											</label>
+										</li>
+									</ol>
+								</li>
+								<li class="radios border-blue-60">
+									<ol>
+										<li>
+											<label for="radio1">
+												<input type="radio" name="radio" id="radio1" value="checkobx1" />Radio 1
+											</label>
+										</li>
+										<li>
+											<label for="radio2">
+												<input type="radio" name="radio" id="radio2" value="radio2" />Radio 2 with a severly long text so it certainly doesn't fit into one line in the form (by adding even more tekst to this line)
+											</label>
+										</li>
+										<li>
+											<label for="radio3">
+												<input type="radio" name="radio" id="radio3" value="radio3" />Radio 3
+											</label>
+										</li>
+									</ol>
+								</li>
+							</ol>
+							<div class="control">
+								<input class="button bg-blue-50 bg-blue-60-hover" type="submit" name="form-fields-submit" id="form-fields-submit" value="Submit" />
+							</div>
+						</fieldset>
+					</form>
+				</section>
+				<section class="box top-border bg-white border-blue-50">
+					<header class="border-grey-10">
+						<h3>Form <span>and fields</span></h3>
+					</header>
+					<form action="" method="get" id="form-features">
+						<fieldset>
+							<ol>
+								<li class="border-blue-60">
+									<label for="form-features-text">Text</label>
+									<p class="form-help grey-50">This is a longer help text that spans multiple lines (and more if need be)</p>
+									<input class="field border-grey-40 grey-70" type="text" name="text" id="form-features-text" placeholder="Text Field" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-features-datetime" class="red-60"><span class="/media/fonts/exclamation-triangle"></span> Datetime</label>
+									<ul class="errorlist red-60">
+										<li>Error that explains what needs to be fixed</li>
+									</ul>
+									<input class="field border-red-60 grey-70" type="datetime-local" name="datetime" id="form-features-datetime" placeholder="Datetime Field" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-features-password">Password</label>
+									<input class="field border-grey-40 grey-70" type="password" name="password" id="form-features-password" placeholder="password" required="required" value="" />
+								</li>
+								<li class="border-blue-60">
+									<label for="form-features-select">Select</label>
+									<select class="field border-grey-40 grey-70" name="select" id="form-features-select" required="required">
+										<option value="1">First</option>
+										<option value="2">Second</option>
+										<option value="3">Third</option>
+									</select>
+								</li>
+								<li class="border-blue-60">
+									<label for="form-features-textarea">Textarea</label>
+									<textarea class="field border-grey-40 grey-70" name="textarea" id="form-features-textarea" required="required"></textarea>
+								</li>
+							</ol>
+							<div class="control">
+								<input class="button bg-blue-50 bg-blue-60-hover" type="submit" name="form-features-submit" id="form-features-submit" value="Submit" />
+							</div>
+						</fieldset>
+					</form>
+				</section>
+			</div>
+			<section class="box top-border bg-white border-blue-50">
+				<header class="border-grey-10">
+					<h3>Tags <span>a list of them</span></h3>
+				</header>
+				<div>
+					<span class="tag white bg-yellow-50">Tags</span>
+					<span class="tag white bg-red-50">Tags</span>
+					<span class="tag white bg-blue-50">Tags</span>
+					<span class="tag white bg-indigo-50">Tags</span>
+					<span class="tag white bg-purple-50">Tags</span>
+				</div>
+			</section>
+			<div data-grid="1/3">
+				<div class="card card-regular bg-white">
+					<header class="inline-block-children bg-amber-70">
+						<div class="img">
+							<img src="media/img/user.jpg" alt="Ron Swanson" width="65" height="65" />
+						</div>
+						<div class="text white">
+							<h4>Ron Swanson</h4>
+							<p>CTO</p>
+						</div>
+					</header>
+					<table class="full-width">
+						<tbody>
+							<tr>
+								<td>Projects</td>
+								<td class="right">47</td>
+							</tr>
+							<tr>
+								<td>Years of Experience</td>
+								<td class="right">12</td>
+							</tr>
+							<tr>
+								<td>Skills</td>
+								<td class="right"><span class="badge bg-green-50 white">Python</span><span class="badge bg-indigo-50 white">JavaScript</span><span class="badge bg-light-blue-50 white">SQL/NoSQL</span><span class="badge bg-yellow-70 white">Blockchain</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="card card-center bg-white">
+					<header class="inline-block-children bg-cyan-A70">
+						<div class="img border-white">
+							<img src="media/img/user.jpg" alt="Ron Swanson" width="90" height="90" />
+						</div>
+						<div class="text white">
+							<h4>Ron Swanson</h4>
+							<p>CTO</p>
+						</div>
+					</header>
+					<div class="content">
+						<ol data-grid="1/3">
+							<li class="column column-33 center border-grey-10">
+								<p><strong>Projects</strong></p>
+								<p>47</p>
+							</li>
+							<li class="column column-33 center border-grey-10">
+								<p><strong>Years of Experience</strong></p>
+								<p>12</p>
+							</li>
+							<li class="column column-33 center border-grey-10">
+								<p><strong>Skills</strong></p>
+								<p>Many</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script data-main="media/js/init" src="media/js/require.js"></script>
+	</body>
+</html>
