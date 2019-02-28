@@ -36,18 +36,6 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 			});
 		},
 		initGridData: function () {
-			document.querySelectorAll('main > *, .grid > *, [data-column]').forEach(function (elm, i) {
-				let column = elm.getAttribute('data-column');
-				
-				elm.style['grid-column'] = column || '1/-1';
-			});
-			document.querySelectorAll('[data-row]').forEach(function (elm, i) {
-				let row = elm.getAttribute('data-row');
-
-				if (!!row) {
-					elm.style['grid-row'] = row;
-				}
-			});
 			document.querySelectorAll('[data-grid]').forEach(function (elm, i) {
 				let grid = elm.getAttribute('data-grid'),
 					gridParts = [],
@@ -62,7 +50,6 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 
 					elm.style.gridTemplateRows = 'repeat(' + rows + ', 1fr)';
 					elm.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
-					elm.classList.add('grid');
 				}
 			});
 		}

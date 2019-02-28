@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800|Roboto:100,300,400,500,700|Source+Sans+Pro:200,300,400,600,700&subset=latin-ext');
 
+:root {
+	--main-columns: 24;
+	--grid-gap: 15px
+}
+
 body {font-family:'Source Sans Pro',sans-serif;display:grid;grid-template-columns:230px 1fr;grid-gap:0;grid-auto-rows:min-content;}
 
 .head {grid-column:1/3;grid-row:1;display:grid;grid-auto-rows:50px;grid-template-columns:230px 1fr;grid-gap:0;}
@@ -30,8 +35,12 @@ body {font-family:'Source Sans Pro',sans-serif;display:grid;grid-template-column
 .navigation ol li.selected a {padding:15px 5px 15px 12px;border-style:solid;border-width:0 0 0 3px;}
 .navigation ol li.header {padding:15px 5px 15px 15px;font-size:12px;text-transform:uppercase;}
 
-main {grid-column:2/3;grid-row:2;display:grid;grid-template-columns:repeat(12, 1fr);grid-auto-rows:min-content;grid-gap:15px;padding:0 15px;}
-.grid {display:grid;grid-auto-rows:min-content;grid-gap:15px;}
+main {grid-column:2/3;grid-row:2;display:grid;grid-template-columns:repeat(var(--main-columns), 1fr);grid-auto-rows:min-content;grid-gap:var(--grid-gap);padding:0 15px;}
+main > * {grid-column:1/-1;}
+[data-grid] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);}
+/*Boy I wish I could do this:*/
+/*[data-grid-columns] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-columns:repeat(attr(data-grid-columns integer, 1), 1fr);}*/
+/*[data-grid-rows] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-rows:repeat(attr(data-grid-rows integer, 1), 1fr);}*/
 
 #notifications {width:calc(100% + 30px);margin:0 0 0 -15px;} /*These width and margin machinations are due to grid fitting*/
 #notifications li {padding:20px 80px 20px 40px;position:relative;}
@@ -41,36 +50,6 @@ main {grid-column:2/3;grid-row:2;display:grid;grid-template-columns:repeat(12, 1
 
 main h2 {font-size:24px;letter-spacing:normal;word-spacing:normal;display:block;}
 main h2 span {font-size:13px;font-weight:300;}
-
-main .row {}
-
-/*.column {display:inline-block;margin:0 15px;}*/
-/*.column-20 {width:calc(20.00000000% - 30.00999999px);}*/
-/*.column-25 {width:calc(25.00000000% - 30.00999999px);}*/
-/*.column-33 {width:calc(33.33333333% - 30.00999999px);}*/
-/*.column-40 {width:calc(40.00000000% - 30.00999999px);}*/
-/*.column-50 {width:calc(50.00000000% - 30.00999999px);}*/
-/*.column-60 {width:calc(60.00000000% - 30.00999999px);}*/
-/*.column-66 {width:calc(66.66666666% - 30.00999999px);}*/
-/*.column-75 {width:calc(75.00000000% - 30.00999999px);}*/
-/*.column-80 {width:calc(80.00000000% - 30.00999999px);}*/
-/*.column-100 {width:calc(100.00000000% - 30.00999999px);}*/
-
-/*main .row {display:block;width:100%;margin:15px 0;letter-spacing:-4px;}*/
-/*main .row > * {letter-spacing:normal;word-spacing:normal;vertical-align:top;display:inline-block;}*/
-/*main .column .row {width:calc(100% + 30px);margin:0 -15px;}*/
-
-/*.column {display:inline-block;margin:0 15px;}*/
-/*.column-20 {width:calc(20.00000000% - 30.00999999px);}*/
-/*.column-25 {width:calc(25.00000000% - 30.00999999px);}*/
-/*.column-33 {width:calc(33.33333333% - 30.00999999px);}*/
-/*.column-40 {width:calc(40.00000000% - 30.00999999px);}*/
-/*.column-50 {width:calc(50.00000000% - 30.00999999px);}*/
-/*.column-60 {width:calc(60.00000000% - 30.00999999px);}*/
-/*.column-66 {width:calc(66.66666666% - 30.00999999px);}*/
-/*.column-75 {width:calc(75.00000000% - 30.00999999px);}*/
-/*.column-80 {width:calc(80.00000000% - 30.00999999px);}*/
-/*.column-100 {width:calc(100.00000000% - 30.00999999px);}*/
 
 .height-50 {height:50px;}
 .height-100 {height:100px;}
@@ -101,7 +80,8 @@ header .control a {transition:.3s all ease;cursor:pointer;font-size:14px;line-he
 .card-center header {position:relative;margin:0 0 46px 0;}
 .card-center header .img {position:absolute;bottom:-36px;left:calc(50% - 46px);border-width:2px;border-style:solid;border-radius:46px;margin:20px 0 0 0;}
 .card-center header .img img {border-radius:45px;}
-.card-center .column {margin:0;padding:10px 14px;min-height:60px;border-style:solid;border-width:0 1px 0 0;}
+.card-center .column {margin:0;padding:10px 15px 10px 0;min-height:60px;border-style:solid;border-width:0 1px 0 0;}
+.card-center .column:last-child {padding:10px 0;}
 .card-center .column p {font-size:16px;line-height:20px;margin:0;}
 .card-center .column strong {text-transform:uppercase;line-height:18px;}
 .card-center .column:last-child {border:none;}
