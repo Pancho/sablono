@@ -1,6 +1,6 @@
 'use strict';
 define(function () {
-	var r = {
+	let r = {
 		events: {},
 		params: function (dictionary) {
 			let result = [];
@@ -14,7 +14,7 @@ define(function () {
 		initEventDelegation: function (event) {
 			document.addEventListener(event, function (ev) {
 				r.events[event].forEach(function (blob, i) {
-					var target = ev.target;
+					let target = ev.target;
 					for (; target && target !== document; target = target.parentNode) {
 						if (target.matches(blob.selector)) {
 							try {
@@ -27,21 +27,49 @@ define(function () {
 					}
 				});
 			}, false);
+		},
+		inlineElements: ['a', 'span', 'bdo', 'em', 'strong', 'dfn', 'code', 'samp', 'kbd', 'var', 'cite', 'abbr', 'acronym', 'q', 'sub', 'sup', 'tt', 'i', 'b', 'big', 'small', 'u', 's', 'strike', 'font', 'ins', 'del', 'pre', 'address', 'dt', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
+		formatHTML: function (node, level, indentCharacter) {
+			let indentBefore = new Array(level + 1).join(indentCharacter),
+				indentAfter = new Array(level).join(indentCharacter),
+				textNode = null,
+				i = 0,
+				j = node.children.length;
+
+			for (; i < j; i += 1) {
+				if (r.inlineElements.indexOf(node.children[i].tagName.toLowerCase()) === -1) {
+					textNode = document.createTextNode('\n' + indentBefore);
+					node.insertBefore(textNode, node.children[i]);
+					r.formatHTML(node.children[i], level + 1, indentCharacter);
+
+					if (node.lastElementChild === node.children[i]) {
+						textNode = document.createTextNode('\n' + indentAfter);
+						node.appendChild(textNode);
+					}
+				} else {
+					textNode = document.createTextNode('\n' + indentBefore);
+					node.insertBefore(textNode, node.children[i]);
+					textNode = document.createTextNode('\n' + indentAfter);
+					node.appendChild(textNode);
+				}
+			}
+
+			return node.innerHTML.replace(/^\s*$(?:\r\n?|\n)/gm, '');
 		}
 	}, u = {
-		delegateEvent: function (selector, event, namespace, handler) {
+		delegateEvent: function (selector, event, handler, namespace) {
 			if (!r.events[event]) {
 				r.events[event] = [];
 				r.initEventDelegation(event);
 			}
 			r.events[event].push({
 				selector: selector,
-				namespace: namespace,
+				namespace: namespace || 'global',
 				handler: handler
 			});
 		},
 		removeEvent: function (event, selector, namespace) {
-			f.events[event].forEach(function (blob, i) {
+			r.events[event].forEach(function (blob, i) {
 				if (blob.selector === selector && blob.namespace === namespace) {
 					r.events[event].splice(i, 1);
 				}
@@ -70,6 +98,16 @@ define(function () {
 			}
 
 			return fetch(url, config);
+		},
+		indentHTML: function (html, indentCharacter) {
+			let div = document.createElement('div');
+
+			html = html.replace(/\n/g, '')
+				.replace(/[\t ]+</g, '<')
+				.replace(/>[\t ]+</g, '><')
+				.replace(/>[\t ]+$/g, '>');
+			div.innerHTML = html.trim();
+			return r.formatHTML(div, 0, indentCharacter || '\t');
 		}
 	};
 

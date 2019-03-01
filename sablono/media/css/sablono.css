@@ -38,29 +38,18 @@ body {font-family:'Source Sans Pro',sans-serif;display:grid;grid-template-column
 main {grid-column:2/3;grid-row:2;display:grid;grid-template-columns:repeat(var(--main-columns), 1fr);grid-auto-rows:min-content;grid-gap:var(--grid-gap);padding:0 15px;}
 main > * {grid-column:1/-1;}
 [data-grid] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);}
-/*Boy I wish I could do this:*/
-/*[data-grid-columns] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-columns:repeat(attr(data-grid-columns integer, 1), 1fr);}*/
-/*[data-grid-rows] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-rows:repeat(attr(data-grid-rows integer, 1), 1fr);}*/
+/*Boy, I wish I could do this:*/
+/*[grid-columns] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-columns:repeat(attr(data-grid-columns integer, 1), 1fr);}*/
+/*[grid-rows] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-rows:repeat(attr(data-grid-rows integer, 1), 1fr);}*/
+
+main h2 {font-size:24px;letter-spacing:normal;word-spacing:normal;display:block;}
+main h2 span {font-size:13px;font-weight:300;}
 
 #notifications {width:calc(100% + 30px);margin:0 0 0 -15px;} /*These width and margin machinations are due to grid fitting*/
 #notifications li {padding:20px 80px 20px 40px;position:relative;}
 #notifications li p {font-size:16px;line-height:20px;}
 #notifications li a {color:inherit;}
 #notifications li .close {position:absolute;top:20px;right:25px;font-size:16px;line-height:1;cursor:pointer;}
-
-main h2 {font-size:24px;letter-spacing:normal;word-spacing:normal;display:block;}
-main h2 span {font-size:13px;font-weight:300;}
-
-.height-50 {height:50px;}
-.height-100 {height:100px;}
-.height-150 {height:150px;}
-.height-200 {height:200px;}
-.height-250 {height:250px;}
-.height-300 {height:300px;}
-.height-350 {height:350px;}
-.height-400 {height:400px;}
-.height-450 {height:450px;}
-.height-500 {height:500px;}
 
 h3 {font-size:18px;}
 h3 span {font-size:13px;font-weight:300;}
@@ -240,6 +229,17 @@ a {color:inherit;}
 .hidden {display:none;}
 .inline-block-children {letter-spacing:-4px;}
 .inline-block-children > * {letter-spacing:normal;word-spacing:normal;vertical-align:top;display:inline-block;}
+
+.height-50 {height:50px;}
+.height-100 {height:100px;}
+.height-150 {height:150px;}
+.height-200 {height:200px;}
+.height-250 {height:250px;}
+.height-300 {height:300px;}
+.height-350 {height:350px;}
+.height-400 {height:400px;}
+.height-450 {height:450px;}
+.height-500 {height:500px;}
 
 @-webkit-keyframes spin {
 	0% {-webkit-transform:rotate(0deg);transform:rotate(0deg);}

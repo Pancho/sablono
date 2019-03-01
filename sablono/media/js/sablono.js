@@ -9,7 +9,7 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 			sortable.initTable(table);
 		},
 		initTabbedBoxes: function () {
-			mavor.delegateEvent('.box-tabbed .tabs li', 'click', 'tabbed-boxes', function (ev) {
+			mavor.delegateEvent('.box-tabbed .tabs li', 'click', function (ev) {
 				let tab = this;
 
 				ev.preventDefault();
@@ -23,17 +23,17 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 
 				tab.classList.add('selected', 'border-blue-50', 'bg-white');
 				document.querySelector('#' + tab.getAttribute('data-target')).style.display = 'block';
-			});
+			}, 'tabbed-boxes');
 		},
 		initNotifications: function () {
-			mavor.delegateEvent('#notifications .close', 'click', 'notifications', function (ev) {
+			mavor.delegateEvent('#notifications .close', 'click', function (ev) {
 				let item = this;
 
 				ev.preventDefault();
 
 				item.closest('li').style.display = 'none';
 				item.closest('li').parentNode.removeChild(listItem);
-			});
+			}, 'notifications');
 		},
 		initGridData: function () {
 			document.querySelectorAll('[data-grid]').forEach(function (elm, i) {
