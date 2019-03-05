@@ -76,7 +76,7 @@ define(function () {
 			});
 		},
 		get: function (urlName, data, config) {
-			let url = document.querySelectorAll('body')[0].getAttribute('data-' + urlName);
+			let url = document.querySelector('body').dataset[urlName];
 
 			data = data || {};
 			config = config || {};
@@ -88,7 +88,7 @@ define(function () {
 			return fetch(url, config);
 		},
 		post: function (urlName, data, config) {
-			let url = document.querySelectorAll('body')[0].getAttribute('data-' + urlName);
+			let url = document.querySelector('body').dataset[urlName];
 
 			data = data || {};
 			config = config || {};

@@ -4,7 +4,7 @@ require.config({
 });
 
 define(['sortable', 'mavor'], function (sortable, mavor) {
-	return {
+	let u = {
 		initSortedTable: function (table) {
 			sortable.initTable(table);
 		},
@@ -35,6 +35,10 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 				item.closest('li').parentNode.removeChild(listItem);
 			}, 'notifications');
 		},
+		setElementGrid: function (elm, rows, columns) {
+			elm.style.gridTemplateRows = 'repeat(' + rows + ', 1fr)';
+			elm.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
+		},
 		initGridData: function () {
 			document.querySelectorAll('[data-grid]').forEach(function (elm, i) {
 				let grid = elm.getAttribute('data-grid'),
@@ -48,10 +52,11 @@ define(['sortable', 'mavor'], function (sortable, mavor) {
 					rows = gridParts[0];
 					columns = gridParts[1];
 
-					elm.style.gridTemplateRows = 'repeat(' + rows + ', 1fr)';
-					elm.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
+					u.setElementGrid(elm, rows, columns);
 				}
 			});
 		}
 	};
+
+	return u;
 });

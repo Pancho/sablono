@@ -3,32 +3,32 @@
 	<head>
 		<title>Sablono - Template</title>
 		<meta charset="utf-8">
-		<link type="text/css" rel="stylesheet" href="media/css/reset.css" />
-		<link type="text/css" rel="stylesheet" href="media/css/sablono.css" />
-		<link type="text/css" rel="stylesheet" href="media/css/colors.css" />
+		<link type="text/css" rel="stylesheet" href="/media/css/reset.css?v=1" />
+		<link type="text/css" rel="stylesheet" href="/media/css/sablono.css?v=1" />
+		<link type="text/css" rel="stylesheet" href="/media/css/palette.css?v=1" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width" />
 	</head>
 	<body>
-		<header class="head bg-light-blue-70 white">
-			<h1 class="bg-light-blue-80"><a href="" class="white" title="It's ´template´ in Esperanto"><strong>S</strong>ablono</a></h1>
+		<header class="head bg-lightblue-70 white">
+			<h1 class="bg-lightblue-80"><a href="" class="white" title="It's ´template´ in Esperanto"><strong>S</strong>ablono</a></h1>
 			<ol>
 				<li class="logout bg-shade-10-hover"><a href="" class="far fa-flag"><sup class="bg-green-60">3</sup></a></li>
 				<li class="logout bg-shade-10-hover"><a href="" class="far fa-bell"><sup class="bg-amber-70">15</sup></a></li>
 				<li class="logout bg-shade-10-hover"><a href="" class="far fa-envelope"><sup class="bg-red-60">59</sup></a></li>
 				<li class="user">
-					<img src="media/img/user.jpg" alt="Ron Swanson" width="25" height="25"/>
+					<img src="/media/img/user.jpg" alt="Ron Swanson" width="25" height="25"/>
 					<p class="white">Ron Swanson</p>
 				</li>
 				<li class="logout bg-shade-10-hover"><a href="" class="fas fa-sign-out-alt"></a></li>
 				<li class="login bg-shade-10-hover"><a href="" class="far fa-user"></a></li>
 			</ol>
 		</header>
-		<nav class="navigation bg-blue-grey-90">
+		<nav class="navigation bg-bluegrey-90">
 			<div class="profile">
 				<div class="user inline-block-children">
 					<div class="image">
-						<img src="media/img/user.jpg" alt="Ron Swanson" width="45" height="45"/>
+						<img src="/media/img/user.jpg" alt="Ron Swanson" width="45" height="45"/>
 					</div>
 					<div>
 						<p class="white"><strong>Ron Swanson</strong></p>
@@ -37,23 +37,23 @@
 				</div>
 			</div>
 			<ol>
-				<li class="header bg-shade-30 blue-grey-70">System</li>
+				<li class="header bg-shade-30 bluegrey-70">System</li>
 				<li>
-					<a href="" class="blue-grey-20 white-hover bg-shade-20-hover"><span class="fas fa-cogs"></span> Admin</a>
+					<a href="/" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fas fa-cogs"></span> Admin</a>
 				</li>
-				<li class="header bg-shade-30 blue-grey-70">Source</li>
+				<li class="header bg-shade-30 bluegrey-70">Source</li>
 				<li class="selected">
-					<a href="" class="white white-hover bg-shade-20-hover border-light-blue-70"><span class="fas fa-code"></span> HTML Templates</a>
+					<a href="/" class="white white-hover bg-shade-20-hover border-lightblue-70"><span class="fas fa-code"></span> HTML Templates</a>
 				</li>
 				<li>
-					<a href="" class="blue-grey-20 white-hover bg-shade-20-hover"><span class="fab fa-css3"></span> Customize</a>
+					<a href="/" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fab fa-css3"></span> Customize</a>
 				</li>
 				<li>
-					<a href="" class="blue-grey-20 white-hover bg-shade-20-hover"><span class="fas fa-palette"></span> Colors</a>
+					<a href="/colors" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fas fa-palette"></span> Colors</a>
 				</li>
 			</ol>
 		</nav>
-		<main class="bg-blue-grey-5">
+		<main class="bg-bluegrey-5">
 			<ol id="notifications">
 				<li class="white bg-amber-70">
 					<p>This is a sample notification that's supposed to be really hard to miss. And it's stackable with a copy of this element's parent element.</p>
@@ -64,11 +64,9 @@
 					<a class="fas fa-times close"></a>
 				</li>
 			</ol>
-			<div>
-				<h2>Dashboard <span class="grey-60">Dashboard subtitle</span></h2>
-			</div>
+			<h2>Dashboard <span class="grey-60">Dashboard subtitle</span></h2>
 			<div data-grid="1/4">
-				<div class="info-box bg-light-blue-30 white">
+				<div class="info-box bg-lightblue-30 white">
 					<div class="info-box-content inline-block-children">
 						<div class="text">
 							<h4>150</h4>
@@ -119,7 +117,7 @@
 			</div>
 			<div data-grid="1/4">
 				<div class="info-box-basic white inline-block-children bg-white">
-					<div class="bg-light-blue-30">
+					<div class="bg-lightblue-30">
 						<div class="icon far fa-user white"></div>
 					</div>
 					<div class="text">
@@ -227,7 +225,7 @@
 				<section class="box bg-white border-blue-50 top-border">
 					<header class="border-grey-10">
 						<h3>Loading Example <span>with spinner</span></h3>
-						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+						<span class="control inline-block-children"><a class="collapse fas fa-minus shade-50 shade-60-hover"></a><a class="close fas fa-times shade-50 shade-60-hover"></a></span>
 					</header>
 					<div class="loading"></div>
 				</section>
@@ -283,7 +281,7 @@
 										<td>Full Height</td>
 										<td>
 											<div class="progress-bar bg-shade-10">
-												<div class="bg-light-green-50" style="width:100.00000000%;" data-tooltip="Due to the nature of CSS, if possible, always round percentages in styles to 8 decimal places (I'd do it even if I'm 100% sure it's going to be an integer)"></div>
+												<div class="bg-lightgreen-50" style="width:100.00000000%;" data-tooltip="Due to the nature of CSS, if possible, always round percentages in styles to 8 decimal places (I'd do it even if I'm 100% sure it's going to be an integer)"></div>
 											</div>
 										</td>
 									</tr>
@@ -297,7 +295,7 @@
 				<section class="box top-border bg-white border-blue-50">
 					<header class="border-grey-10">
 						<h3>Just some text <span>and how it looks</span></h3>
-						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+						<span class="control inline-block-children"><a class="collapse fas fa-minus shade-50 shade-60-hover"></a><a class="close fas fa-times shade-50 shade-60-hover"></a></span>
 					</header>
 					<div class="content">
 						<p><strong>How to use:</strong></p>
@@ -307,7 +305,7 @@
 				<section class="box top-border bg-white border-blue-50">
 					<header class="border-grey-10">
 						<h3>Just some text <span>with a progress bar</span></h3>
-						<span class="control inline-block-children"><a class="collapse /media/fonts/minus shade-50 shade-60-hover"></a><a class="close /media/fonts/times shade-50 shade-60-hover"></a></span>
+						<span class="control inline-block-children"><a class="collapse fas fa-minus shade-50 shade-60-hover"></a><a class="close fas fa-times shade-50 shade-60-hover"></a></span>
 					</header>
 					<div class="content">
 						<p><strong>How to use:</strong></p>
@@ -327,7 +325,7 @@
 			</div>
 			<div data-grid="1/4">
 				<div class="info-box-bar vertical white">
-					<div class="info-box-content bg-light-blue-30 inline-block-children">
+					<div class="info-box-content bg-lightblue-30 inline-block-children">
 						<div class="bg-shade-20">
 							<div class="icon fas fa-user white"></div>
 						</div>
@@ -382,6 +380,60 @@
 							<div class="bar bg-shade-20">
 								<div class="progress bg-white" style="width:33.33333333%;" data-tooltip="Due to the nature of CSS, if possible, always round percentages in styles to 8 decimal places (I'd do it even if I'm 100% sure it's going to be an integer)"></div>
 							</div>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-grid="1/4">
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-lightblue-30 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-user white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<p class="white">150</p>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-green-60 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-briefcase white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<p class="white">150</p>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-red-60 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-comment white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<p class="white">150</p>
+							<span class="white">70%</span>
+						</div>
+					</div>
+				</div>
+				<div class="info-box-bar vertical white">
+					<div class="info-box-content bg-green-60 inline-block-children">
+						<div class="bg-shade-20">
+							<div class="icon fas fa-briefcase white"></div>
+						</div>
+						<div class="text">
+							<h4 class="white">Open</h4>
+							<p class="white">150</p>
+							<p class="white">150</p>
 							<span class="white">70%</span>
 						</div>
 					</div>
@@ -477,7 +529,7 @@
 									<input class="field border-grey-40 grey-70" type="text" name="text" id="form-features-text" placeholder="Text Field" required="required" value="" />
 								</li>
 								<li>
-									<label for="form-features-datetime" class="red-60"><span class="/media/fonts/exclamation-triangle"></span> Datetime</label>
+									<label for="form-features-datetime" class="red-60"><span class="fas fa-exclamation-triangle"></span> Datetime</label>
 									<ul class="errorlist red-60">
 										<li>Error that explains what needs to be fixed</li>
 									</ul>
@@ -523,7 +575,7 @@
 				<div class="card card-regular bg-white">
 					<header class="inline-block-children bg-amber-70">
 						<div class="img">
-							<img src="media/img/user.jpg" alt="Ron Swanson" width="65" height="65" />
+							<img src="/media/img/user.jpg" alt="Ron Swanson" width="65" height="65" />
 						</div>
 						<div class="text white">
 							<h4>Ron Swanson</h4>
@@ -542,7 +594,7 @@
 							</tr>
 							<tr>
 								<td>Skills</td>
-								<td class="right"><span class="badge bg-green-50 white">Python</span><span class="badge bg-indigo-50 white">JavaScript</span><span class="badge bg-light-blue-50 white">SQL/NoSQL</span><span class="badge bg-yellow-70 white">Blockchain</span></td>
+								<td class="right"><span class="badge bg-green-50 white">Python</span><span class="badge bg-indigo-50 white">JavaScript</span><span class="badge bg-lightblue-50 white">SQL/NoSQL</span><span class="badge bg-yellow-70 white">Blockchain</span></td>
 							</tr>
 						</tbody>
 					</table>
@@ -550,7 +602,7 @@
 				<div class="card card-center bg-white">
 					<header class="inline-block-children bg-cyan-A70">
 						<div class="img border-white">
-							<img src="media/img/user.jpg" alt="Ron Swanson" width="90" height="90" />
+							<img src="/media/img/user.jpg" alt="Ron Swanson" width="90" height="90" />
 						</div>
 						<div class="text white">
 							<h4>Ron Swanson</h4>
@@ -576,6 +628,6 @@
 				</div>
 			</div>
 		</main>
-		<script data-main="media/js/init" src="media/js/require.js"></script>
+		<script data-main="media/js/init" src="/media/js/require.js"></script>
 	</body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sablono - Template</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="/media/css/reset.css?v=1" />
+		<link type="text/css" rel="stylesheet" href="/media/css/sablono.css?v=1" />
+		<link type="text/css" rel="stylesheet" href="/media/css/palette.css?v=1" />
+		<link type="text/css" rel="stylesheet" href="/media/css/colors.css?v=1" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width" />
+	</head>
+	<body data-colors="/media/css/palette.css">
+		<header class="head bg-lightblue-70 white">
+			<h1 class="bg-lightblue-80"><a href="" class="white" title="It's ´template´ in Esperanto"><strong>S</strong>ablono</a></h1>
+			<ol>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-flag"><sup class="bg-green-60">3</sup></a></li>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-bell"><sup class="bg-amber-70">15</sup></a></li>
+				<li class="logout bg-shade-10-hover"><a href="" class="far fa-envelope"><sup class="bg-red-60">59</sup></a></li>
+				<li class="user">
+					<img src="/media/img/user.jpg" alt="Ron Swanson" width="25" height="25"/>
+					<p class="white">Ron Swanson</p>
+				</li>
+				<li class="logout bg-shade-10-hover"><a href="" class="fas fa-sign-out-alt"></a></li>
+				<li class="login bg-shade-10-hover"><a href="" class="far fa-user"></a></li>
+			</ol>
+		</header>
+		<nav class="navigation bg-bluegrey-90">
+			<div class="profile">
+				<div class="user inline-block-children">
+					<div class="image">
+						<img src="/media/img/user.jpg" alt="Ron Swanson" width="45" height="45"/>
+					</div>
+					<div>
+						<p class="white"><strong>Ron Swanson</strong></p>
+						<p class="white" title="Chief Title Officer">CTO</p>
+					</div>
+				</div>
+			</div>
+			<ol>
+				<li class="header bg-shade-30 bluegrey-70">System</li>
+				<li>
+					<a href="/" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fas fa-cogs"></span> Admin</a>
+				</li>
+				<li class="header bg-shade-30 bluegrey-70">Source</li>
+				<li>
+					<a href="/" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fas fa-code"></span> HTML Templates</a>
+				</li>
+				<li>
+					<a href="/" class="bluegrey-20 white-hover bg-shade-20-hover"><span class="fab fa-css3"></span> Customize</a>
+				</li>
+				<li class="selected">
+					<a href="/colors" class="white white-hover bg-shade-20-hover border-lightblue-70"><span class="fas fa-palette"></span> Colors</a>
+				</li>
+			</ol>
+		</nav>
+		<main class="bg-bluegrey-5" id="colors">
+			<h2>Colors <span>from google material color library</span></h2>
+		</main>
+		<script data-main="media/js/colors" src="/media/js/require.js"></script>
+	</body>
+</html>

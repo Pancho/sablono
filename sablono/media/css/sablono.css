@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800|Roboto:100,300,400,500,700|Source+Sans+Pro:200,300,400,600,700&subset=latin-ext');
 
 :root {
-	--main-columns: 24;
+	--main-columns: 12;
 	--grid-gap: 15px
 }
 
@@ -43,6 +43,7 @@ main > * {grid-column:1/-1;}
 /*[grid-rows] {display:grid;grid-auto-rows:min-content;grid-gap:var(--grid-gap);grid-template-rows:repeat(attr(data-grid-rows integer, 1), 1fr);}*/
 
 main h2 {font-size:24px;letter-spacing:normal;word-spacing:normal;display:block;}
+main h2:first-child {margin:15px 0 0 0;}
 main h2 span {font-size:13px;font-weight:300;}
 
 #notifications {width:calc(100% + 30px);margin:0 0 0 -15px;} /*These width and margin machinations are due to grid fitting*/
@@ -108,7 +109,7 @@ header .control a {transition:.3s all ease;cursor:pointer;font-size:14px;line-he
 .info-box-bar.vertical {}
 .info-box-bar.vertical .info-box-content {}
 .info-box-bar.vertical .info-box-content > div {display:block;width:100%;}
-.info-box-bar.vertical .info-box-content > div.text {}
+.info-box-bar.vertical .info-box-content > div.text {height:auto;}
 .info-box-bar.vertical .info-box-content > div h4 {}
 .info-box-bar.vertical .info-box-content > div p {}
 .info-box-bar.vertical .info-box-content > div span {}
@@ -225,7 +226,7 @@ a {color:inherit;}
 .button-set .button {display:block;margin:0 0 10px 0;text-align:center;}
 
 .long-text {word-spacing:normal;white-space:pre-line;}
-
+.inverted {mix-blend-mode:difference;}
 .hidden {display:none;}
 .inline-block-children {letter-spacing:-4px;}
 .inline-block-children > * {letter-spacing:normal;word-spacing:normal;vertical-align:top;display:inline-block;}
