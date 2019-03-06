@@ -118,7 +118,7 @@ let Colors = {
 						let template = Colors.cardTemplate.slice(),  // Make a copy
 							cardElement = document.createElement('div');
 
-						if (i !== 0 && i % 7 === 0) {
+						if (i !== 0 && i % 5 === 0) {
 							gridContainer = document.createElement('div');
 							gridContainer.classList.add('colorGrid');
 							document.querySelector('main').appendChild(gridContainer);
@@ -152,7 +152,7 @@ let Colors = {
 					innerGrid.style.gridAutoColumns = '1fr';
 					innerGrid.style.gridGap = 'var(--grid-gap)';
 					// grid-auto-rows:min-content;grid-gap:var(--grid-gap);
-					sablono.setElementGrid(innerGrid, 1, 7);
+					sablono.setElementGrid(innerGrid, 1, 5);
 				});
 
 			});
